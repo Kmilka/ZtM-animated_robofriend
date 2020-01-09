@@ -1,0 +1,306 @@
+element {
+	--border-color: black;
+}
+
+html {
+	background-color: #ebd600;
+}
+
+.text {
+	font-family: "Sulphur Point", sans-serif;
+	font-size: 2rem;
+	color: #A503FF;
+	text-align: center;
+	margin: auto 0;
+}
+
+/*robo parts*/
+
+.robo {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	color: #A503FF;
+	position: relative;
+}
+
+.roboHead {
+	border-bottom: 1.5rem solid;
+	border-radius: 100% 100% 0% 0%;
+	height: 5.25rem;
+	width: 9.375rem;
+	background-color: #A503FF;
+	margin: auto 0;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: flex-end;
+}
+
+.Eyes {
+	border-radius: 50%;
+	background-color: #FFFFFF;
+	height: 1rem;
+	width: 1rem;
+}
+
+#mouth {
+	border-radius: 50%;
+	border: solid 0.3rem white;
+	background-color: #A503FF;
+	height: 0rem;
+	width: 1rem;
+	position: relative;
+	top: 1rem
+}
+
+#roboBody {
+	height: 9.375rem;
+	width: 15.625rem;
+	display: flex;
+	justify-content: center;
+	margin-top: 0.2rem;
+}
+
+#body {
+	border-radius: 0% 0% 30% 30%;
+	height: 9.375rem;
+	width: 9.375rem;
+	background-color: #A503FF;
+	margin: auto 0;
+	order: 2;
+}
+
+.Hands {
+	border-radius: 1rem/0.5rem;
+	height: 3.125rem;
+	width: 1.625rem;
+	background-color: #A503FF;
+	margin: 0 auto;
+}
+
+#LeftHand {
+	order: 1;
+}
+
+#RightHand {
+	order: 3;
+}
+
+#Legs {
+	display: flex;
+	height: 3.125rem;
+	width: 7.5rem;
+	justify-content: space-around;
+	position: relative;
+	bottom: 1.125rem;
+}
+
+.LegDescription {
+	border-radius: 1rem/1rem;
+	height: 3.125rem;
+	width: 1.875rem;
+	background-color: #A503FF;
+}
+
+/* animations */
+
+@keyframes headAnimate {
+	from {
+		border-radius: 100% 100% 0% 0%;
+		width: 9.375rem;
+	}
+	to {
+		width: 12.5rem;
+		border-radius: 150% 150% 0% 0%;
+	}
+}
+
+.animate-roboHead {
+	animation: headAnimate 0.5s ease infinite alternate-reverse;
+}
+
+@keyframes mouthAnimate {
+	from {
+		height: 1rem;
+		width: 1rem;
+	}
+	to {
+		height: 0rem;
+		widows: 0rem;
+	}
+}
+
+.animate-mouth {
+	animation: mouthAnimate 0.5s ease infinite alternate-reverse;
+}
+
+@keyframes llegAnimate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(45deg);
+	}
+}
+
+.animate-LeftLeg {
+	animation: llegAnimate 0.5s ease infinite alternate-reverse;
+}
+
+
+@keyframes rlegAnimate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(-45deg);
+	}
+}
+
+.animate-RightLeg {
+	animation: rlegAnimate 0.5s ease infinite alternate-reverse;
+}
+
+@keyframes rhandAnimate {
+	from {
+		transform: rotate(0deg);
+
+	}
+	to {
+		transform: rotate(-90deg);
+	}
+}
+
+.animate-RightHand {
+	animation: rhandAnimate 0.5s ease infinite alternate-reverse;
+}
+
+/*text popout styling*/
+
+.popout {
+	font-family: Futura, sans-serif;
+	font-weight: medium;
+	font-size: 3rem;
+	cursor: pointer;
+}
+
+.popout span {
+	animation: popup 1s infinite alternate cubic-bezier(0.86, 0, 0.07, 1);
+	position: relative;
+	display: inline-block;
+}
+
+@keyframes popup {
+	0% {
+		color: #ffffff;
+		transform: translate3d(0, 0, 0);
+	}
+	
+	100% {
+		color: #8456c0;
+		transform: translate3d(1rem, 0, 4rem);
+		text-shadow: -0.08em -0.08em aquamarine;
+	}
+}
+
+.popout span:nth-last-child(1) {
+	animation-delay: -0.87s;
+}
+
+.popout span:nth-last-child(2) {
+	animation-delay: -0.5s;
+}
+
+/* text ants styling*/
+
+svg {
+    font: 5rem 'Montserrat';
+	margin: 0 auto;
+	width: 100%;
+}
+
+.text-copy {
+    fill: none;
+	stroke: royalblue;
+	stroke-width: 2px;
+    stroke-dasharray: 6% 29%;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5s linear infinite;
+}
+
+@keyframes stroke-offset{
+	to {
+		stroke-dashoffset: -35%;
+	}
+}
+
+.text-copy:nth-child(2) {
+	animation-delay: -1s;
+	stroke: yellow;
+}
+
+.text-copy:nth-child(3) {
+	animation-delay: -1.5s;
+	stroke: blue;
+}
+
+.text-copy:nth-child(4) {
+	animation-delay: -2s;
+	stroke: red;
+}
+
+.text-copy:nth-child(5) {
+	animation-delay: -2.5s;
+	stroke: deeppink;
+}
+
+.text-copy:nth-child(6) {
+	animation-delay: -3s;
+	stroke: black;
+}
+
+.text-copy:nth-child(7) {
+	animation-delay: -3.5s;
+	stroke: chartreuse;
+}
+
+/* pause & play button */
+
+.buttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 3rem;
+}
+
+.button.play {
+	border-style: solid;
+	width: 1rem;
+	height: 1rem;
+	border-width: 1rem 0rem 1rem 2rem;
+	border-color: transparent transparent transparent chartreuse;
+	background-color: var(--border-color);
+  }
+
+.button.pause {
+	border-style: solid;
+	height: 2rem;
+	border-style: double;
+	border-width: 0 2rem 0 2rem;
+	border-color: transparent transparent transparent yellow;
+	background-color: var(--border-color);
+	margin: 0 0 0 3rem;
+  }
+
+.stop {
+	background-color: red;
+	height: 2rem;
+	width: 2rem;
+	border: none;
+}
+
+/* goodbye text container */
+
+.hidden {
+	display: none;
+}

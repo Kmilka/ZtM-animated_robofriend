@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My robo-friend</title>
+	<link rel="stylesheet" type="text/css" href="style.css"></link>
+	<link href="https://fonts.googleapis.com/css?family=Sulphur+Point&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+<body>
+	<div class="text">
+		<h1>I love dancing!<br></h1>
+			<p class="popout">
+				<span>T</span>
+				<span>R</span>
+				<span>Y</span><br>
+				<span>M</span>
+				<span>E</span>
+			</p>
+	</div>
+	<svg class="ants hidden">
+		<symbol id="s-text">
+			<text text-anchor="middle" x="50%" y="50%">Party Time<text>
+		</symbol>
+		<g>
+			<use xlink:href="#s-text" class="text-copy"></use>
+			<use xlink:href="#s-text" class="text-copy"></use>
+			<use xlink:href="#s-text" class="text-copy"></use>
+			<use xlink:href="#s-text" class="text-copy"></use>
+			<use xlink:href="#s-text" class="text-copy"></use>
+			<use xlink:href="#s-text" class="text-copy"></use>
+			<use xlink:href="#s-text" class="text-copy"></use>
+		</g>
+	</svg>
+	<div class="goodbye text hidden">
+		<h1>I'm tired!</h1>
+	</div>
+	<div class="buttons hidden">
+		<button class="button play"></button>
+		<button class="button pause"></button>
+		<button class="button stop"></button>
+	</div>
+	<main class="robo">
+		<div class="roboHead">
+			<div id="RightEye" class="Eyes"></div>
+			<div id="mouth" class=""></div>
+			<div id="LeftEye" class="Eyes"></div>
+		</div>
+		<div id="roboBody">
+			<div id="body"></div>
+			<div id="LeftHand" class="Hands"></div>
+			<div id="RightHand" class="Hands"></div>	
+		</div>
+		<div id="Legs">
+			<div id="LeftLeg" class="LegDescription"></div>
+			<div id="RightLeg" class="LegDescription"></div>	
+		</div>
+	</main>
+	<audio hidden src="AudioSphere_-_Energetic_Uplifting_Indie_Rock__Full_Track_.mp3" controls class="media"></audio>
+	<script src="main.js"></script>
+</body>
+</html>
